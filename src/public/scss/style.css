@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 85px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #152a4a;
+}
+.header .headerPart {
+  width: 33%;
+  height: 90%;
+}
+.header .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: #fff;
+}
+.header .logo h1 {
+  font-size: 3em;
+}
+.header .logo p {
+  font-size: 20px;
+}
+.header .boxSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  background-color: #152a4a;
+}
+.header .boxSearch .search {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 40px;
+  transition: 0.5s;
+  box-shadow: 0 0 0 5px #2573ef;
+  overflow: hidden;
+}
+.header .boxSearch .search .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+.header .boxSearch .search .icon::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #287dfc;
+  border-radius: 50%;
+  transform: translate(-4px, -4px);
+}
+.header .boxSearch .search .icon::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  background: #287dfc;
+  transform: translate(6px, 6px) rotate(315deg);
+}
+.header .boxSearch .search .input {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .boxSearch .search .input input {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: navajowhite;
+  font-size: 15px;
+  padding: 10px 0;
+}
+.header .boxSearch .search .clear {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .boxSearch .search .clear::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 15px;
+  background: #152a4a;
+  transform: rotate(45deg);
+}
+.header .boxSearch .search .clear::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 15px;
+  background: #152a4a;
+  transform: rotate(315deg);
+}
+.header .boxSearch .search.active {
+  width: 360px;
+}
+.header .cartAndName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .cartAndName .registro2 {
+  font-size: 12px;
+  color: white;
+}
+.header .cartAndName .boxButton {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .cartAndName .registro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .cartAndName .registro button {
+  width: 40%;
+  height: 60%;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #E74C3C;
+  color: white;
+}
+.header .cartAndName .cart button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #E74C3C;
+  color: white;
+  border: none;
+}
+
+.navAndBody {
+  width: 100%;
+  height: 78%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.navAndBody .contentNav {
+  width: 13%;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid black;
+}
+.navAndBody .contentNav .siderBar {
+  width: 95%;
+  height: 95%;
+  border: 1px solid white;
+}
+.navAndBody .contentNav .siderBar ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.navAndBody .contentNav .siderBar ul li {
+  width: 80%;
+  height: 5%;
+  border: 2px solid white;
+  background-color: #152a4a;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.navAndBody .contentNav .siderBar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  height: 110px;
+  border: 1px solid black;
+  background-color: #152a4a;
+  margin: auto;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer .contentBox {
+  border: 1px solid white;
+  width: 19%;
+  height: 90%;
+}
+.footer a {
+  color: white;
+  font-size: 15px;
+}
+
+.containt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, rgba(133, 238, 123, 0.3) 10%, rgba(180, 219, 238, 0.7));
+}
+.containt .contentForm {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.containt .contentForm .titleForm {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-top: 10px;
+}
+.containt .contentForm .forRegistro {
+  width: 60%;
+  height: 80%;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containt .contentForm .forRegistro form {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.containt .contentForm .forRegistro form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 14%;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.containt .contentForm .forRegistro form label input {
+  height: 60%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e88431;
+  background-color: transparent;
+}
+.containt .contentForm .forRegistro form .inputSubmit {
+  width: 10%;
+  height: 7%;
+  border: none;
+  border-radius: 10px;
+  background-color: #E74C3C;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.containt .contentForm .forRegistro form .inputSubmit:hover {
+  background-color: #a5382b;
+}
+.containt .contentForm .buttonBack {
+  margin: 15px;
+  width: 7%;
+  height: 7%;
+  border-radius: 10px;
+}
+.containt .contentForm .buttonBack button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: #E74C3C;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.containt .contentForm .buttonBack button:hover {
+  background-color: #a5382b;
+}/*# sourceMappingURL=style.css.map */
