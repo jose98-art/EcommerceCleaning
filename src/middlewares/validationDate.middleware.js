@@ -1,12 +1,15 @@
-// import Swal from 'sweetalert2'
+import config from "../config.js"
 
-export function validationDateLoGIN(req,res,next){
-    const objUser = req.body
-    const {first_name, last_name, email, age, password} = objUser
-    if(!first_name || !last_name || !email || !age || !password){
-        res.send('campos vacios')
-    }else{
-        res.send('validado')
+export function validationRol(req,res,next){
+    const objUser = req.session.userInfo
+    const {email, password} = objUser
+    // console.log(objUser.email, 'middleware')
+
+    const emailAdmin = config.emailAdmin
+    const passwordAdmin = config.passwordAdmin
+
+    if(emailAdmin === email && passwordAdmin === password ){
+        res.redirect('/admin')
     }
     next()
 }

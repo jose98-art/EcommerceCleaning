@@ -8,4 +8,5 @@ export default class UsersDTO{
         this.password = user.password
         this.dni = user.dni
     }
+
 }

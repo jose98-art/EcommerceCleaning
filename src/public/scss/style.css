@@ -5,6 +5,76 @@
   font-family: "Quicksand", sans-serif;
 }
 
+.containerHome {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://res.cloudinary.com/dl4ui6tel/image/upload/v1687247023/Conjunto_de_iconos_de_servicio_de_limpieza_con_estilo_de_contorno_Vector_Premium_q3gmww.jpg");
+}
+.containerHome .containOption {
+  display: none;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.containerHome .containOption .containTitle {
+  width: 90%;
+  height: 20%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 0.5px solid #E74C3C;
+}
+.containerHome .containOption .containTitle h1 {
+  font-size: 60px;
+}
+.containerHome .containOption .containTitle p {
+  font-size: 26px;
+  font-weight: bold;
+}
+.containerHome .containOption .containerButton {
+  width: 90%;
+  height: 70%;
+  background-image: url("https://res.cloudinary.com/dl4ui6tel/image/upload/v1687247026/Download_House_Cleaning_Services_-_Cleaning_Service_Cartoon_Png_PNG_Image_with_No_Backgroud_-_PNGkey_com_rgulog.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px solid #34b2f5;
+}
+.containerHome .containOption .containerButton button {
+  margin-right: 100px;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #E74C3C;
+  color: white;
+}
+.containerHome .containOption .containerButton button:hover {
+  background-color: #a5382b;
+}
+
 .header {
   width: 100%;
   height: 85px;
@@ -139,35 +209,42 @@
   font-size: 12px;
   color: white;
 }
-.header .cartAndName .boxButton {
-  width: 45%;
+.header .cartAndName .boxUserName {
+  width: 200px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-.header .cartAndName .registro {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+.header .cartAndName .boxUserName h1 {
+  color: white;
+  font-size: 20px;
 }
-.header .cartAndName .registro button {
-  width: 40%;
-  height: 60%;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  background: #E74C3C;
+.header .cartAndName .boxUserName p {
   color: white;
 }
-.header .cartAndName .cart button {
+.header .cartAndName .cart {
+  width: 170px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .cartAndName .cart .buttonCart {
   width: 50px;
   height: 50px;
   border-radius: 50px;
   background: #E74C3C;
   color: white;
   border: none;
+}
+.header .cartAndName .cart .buttonLogout {
+  background: #E74C3C;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .navAndBody {
@@ -218,7 +295,6 @@
 .footer {
   width: 100%;
   height: 110px;
-  border: 1px solid black;
   background-color: #152a4a;
   margin: auto;
   position: absolute;
@@ -229,13 +305,28 @@
   justify-content: space-around;
 }
 .footer .contentBox {
+  width: 20%;
+  height: 100%;
+}
+.footer .contentBox ul {
+  margin: auto;
+  width: 100%;
+  height: 100%;
   border: 1px solid white;
-  width: 19%;
-  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .contentBox ul li {
+  width: 80%;
+  color: white;
 }
 .footer a {
   color: white;
-  font-size: 15px;
+  letter-spacing: 2px;
+  font-size: 13px;
+  text-decoration: none;
 }
 
 .containt {
@@ -329,4 +420,183 @@
 }
 .containt .contentForm .buttonBack button:hover {
   background-color: #a5382b;
+}
+
+.containLogin {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(45deg, rgba(133, 238, 123, 0.3) 10%, rgba(180, 219, 238, 0.7));
+}
+.containLogin .containFom {
+  width: 50%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-top: 100px;
+}
+.containLogin .containFom form {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.containLogin .containFom form input {
+  border-radius: 10px;
+  width: 50%;
+  height: 20%;
+  outline: none;
+  padding: 5px;
+  border: 1px solid #e88431;
+  background-color: transparent;
+}
+.containLogin .containFom form .botonSubmit {
+  background-color: #e88431;
+}
+.containLogin .containButtonUserNew {
+  width: 30%;
+  height: 20%;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.containLogin .containButtonUserNew button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: #e88431;
+}
+
+.containErrorLogin {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.containErrorLogin button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: #e88431;
+}
+
+.containAdmin {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.containAdmin .titleAdmin {
+  width: 80%;
+  height: 50px;
+  margin-top: 10px;
+  text-align: center;
+}
+.containAdmin .formAdmin {
+  width: 90%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.containAdmin .formAdmin form {
+  width: 80%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 10px;
+}
+.containAdmin .formAdmin form label {
+  width: 20%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+.containAdmin .formAdmin form label input {
+  width: 90%;
+  height: 25px;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.containAdmin .containtTable {
+  width: 90%;
+  height: 500px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.containAdmin .containtTable .titleTable {
+  width: 80%;
+  height: 50px;
+  text-align: center;
+}
+.containAdmin .containtTable .productsTable {
+  width: 95%;
+  height: 70%;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+.containAdmin .containtTable .productsTable table {
+  width: 100%;
+  height: 10px;
+}
+.containAdmin .containtTable .productsTable table thead {
+  width: 100%;
+  height: 10px;
+}
+.containAdmin .containtTable .productsTable table thead tr th {
+  border-bottom: 1px solid rgb(2, 2, 2);
+  width: 11%;
+}
+.containAdmin .containtTable .productsTable table tbody {
+  width: 100%;
+  height: 10px;
+}
+.containAdmin .containtTable .productsTable table tbody tr td {
+  border-bottom: 1px solid rgb(0, 255, 34);
+  border-right: 1px solid rgb(0, 255, 34);
+  width: 10%;
+  height: 20px;
+  margin: 5px 0 5px 0;
+  text-align: center;
+  overflow: hidden;
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */

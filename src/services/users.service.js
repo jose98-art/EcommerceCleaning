@@ -10,3 +10,13 @@ export const create = async(objUser) =>{
   const newUser = await UsersDao.create(objUser)
   return newUser
 }
+
+export const login = async (user) =>{
+  const loginUser = await UsersDao.loginUser(user)
+  return loginUser
+}
+
+export const userDelet = async (_id) =>{
+  const deleteUser = await UsersDao.deleteUser(_id)
+  return deleteUser
+}

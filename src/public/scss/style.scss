@@ -6,6 +6,88 @@
 
     }
 
+    // Primera vista----
+    .containerHome{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('https://res.cloudinary.com/dl4ui6tel/image/upload/v1687247023/Conjunto_de_iconos_de_servicio_de_limpieza_con_estilo_de_contorno_Vector_Premium_q3gmww.jpg');
+
+        .containOption{
+            display: none;
+            width: 80%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            border-radius: 10px;
+
+            .containTitle{
+                width: 90%;
+                height: 20%;
+                background-color: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(20px);
+                box-shadow: 0 10px 20px 5px rgba(0,0,0,0.05);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                border: .5px solid #E74C3C;
+
+
+                h1{
+                    font-size: 60px;
+                }
+
+                p{
+                    font-size: 26px;
+                    font-weight: bold;
+                }
+            }
+
+            .containerButton{
+                width: 90%;
+                height: 70%;
+                background-image: url('https://res.cloudinary.com/dl4ui6tel/image/upload/v1687247026/Download_House_Cleaning_Services_-_Cleaning_Service_Cartoon_Png_PNG_Image_with_No_Backgroud_-_PNGkey_com_rgulog.png');
+                background-repeat: no-repeat;
+                background-position: left top;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                flex-direction: row;
+                background-color: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 10px 20px 5px rgba(0,0,0,0.05);
+                border-radius: 10px;
+                border: 1px solid #34b2f5;
+                // border: .5px solid #E74C3C;
+
+                button{
+                    margin-right: 100px;
+                    width: 120px;
+                    height: 50px;
+                    border-radius:10px ;
+                    border: none;
+                    cursor: pointer;
+                    background: #E74C3C;
+                    color: white;
+                }
+                button:hover{
+                    background-color: #a5382b;
+                }
+
+            }
+
+        }
+    }
+
+
+
+    // Segunda vista---
     .header{
         width: 100%;
         height: 85px;
@@ -150,37 +232,45 @@
                 color: white;
             }
 
-            .boxButton{
-                width: 45%;
+            .boxUserName{
+                width: 200px;
                 height: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
+                // border: 1px solid white;
+                h1{
+                    color: white;
+                    font-size: 20px;
+                }
+                p{
+                    color:white;
+                }
             }
-            .registro{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            button{
-                width: 40%;
-                height: 60%;
-                border-radius:10px ;
-                border: none;
-                cursor: pointer;
-                background: #E74C3C;
-                color: white;
-            }
-            }
+         
 
             .cart{
-                button{
+                // border: 1px solid white;
+                width: 170px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                .buttonCart{
                     width: 50px;
                     height: 50px;
                     border-radius: 50px;
                     background: #E74C3C  ;
                     color: white;
                     border: none;
+                }
+                .buttonLogout{
+                    background: #E74C3C  ;
+                    color: white;
+                    border: none;
+                    padding: 5px;
+                    border-radius: 10px;
                 }
             }
         }
@@ -240,7 +330,6 @@
     .footer{
         width: 100%;
         height: 110px;
-        border: 1px solid black;
         background-color: #152a4a;
         margin: auto;
         position: absolute;
@@ -251,15 +340,32 @@
         justify-content: space-around;
 
         .contentBox{
-            border: 1px solid white;
-            width: 19%;
-            height: 90%;
+            width: 20%;
+            height: 100%;
+            ul{
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                border: 1px solid white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                li{
+                    width: 80%;
+                    color: white;
+                }
+            }
         }
         a{
             color: white;
-            font-size: 15px;
+            letter-spacing: 2px;
+            font-size: 13px;
+            text-decoration: none;
         }
     }
+
+
     .containt{
         width: 100%;
         height: 100%;
@@ -366,4 +472,210 @@
             }
         }
     }
+
+    //vista login
+    .containLogin{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(45deg, rgba(133, 238, 123, 0.3) 10%, rgba(180, 219, 238, 0.7));
+        .containFom{
+            width: 50%;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 20px 5px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            margin-top: 100px;
+           
+            form{
+                width: 50%;
+                height: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                input{
+                    border-radius: 10px;
+                    width: 50%;
+                    height: 20%;
+
+                    outline: none;
+                    padding: 5px;
+                    border: 1px solid #e88431;
+                    background-color: transparent;
+                }
+                .botonSubmit{
+                    background-color: #e88431;
+                }
+
+            }
+        }
+        .containButtonUserNew{
+            width: 30%;
+            height: 20%;
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 20px 5px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                button{
+                    outline: none;
+                    border: none;
+                    border-radius:10px ;
+                    padding: 8px 10px;
+                    cursor: pointer;
+                    background-color: #e88431;
+                }
+        }
+    }
     
+
+    //vista de error login y error de registro
+    .containErrorLogin{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        button{
+            outline: none;
+            border: none;
+            border-radius:10px ;
+            padding: 8px 10px;
+            cursor: pointer;
+            background-color: #e88431;
+        }
+    }
+
+    //vista para el ADMIN
+    .containAdmin{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        // justify-content: space-around;
+        flex-direction: column;
+        
+        .titleAdmin{
+            
+            width: 80%;
+            height: 50px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .formAdmin{
+            width: 90%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 10px;
+
+            form{
+                width: 80%;
+                height: 100%;
+                border: 1px solid black;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin: 10px 10px;
+
+                label{
+                    width: 20%;
+                    height: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 20px;
+                    font-size: 15px;
+                    text-align: center;
+                    input{
+                        width: 90%;
+                        height: 25px;
+                        margin: auto;
+                        padding: 5px;
+                        border: 1px solid black;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+        }
+
+        .containtTable{
+            width: 90%;
+            height: 500px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            
+
+            .titleTable{
+                width: 80%;
+                height: 50px;
+                text-align: center;
+
+            }
+            
+            .productsTable{
+                width: 95%;
+                height: 70%;
+                border: 3px solid black;
+                border-radius: 10px;
+                padding: 5px;
+                
+                table{
+                    width: 100%;
+                    height: 10px;
+                    
+                    thead{
+                        width: 100%;
+                        height: 10px;
+                        tr{
+                            th{
+                                border-bottom: 1px solid rgb(2, 2, 2);
+                                width: 11%;
+                            }
+                        }
+                    }
+
+                    tbody{
+                        width: 100%;
+                        height: 10px;
+                        tr{                            
+                            td{
+                                border-bottom: 1px solid rgb(0, 255, 34);
+                                border-right: 1px solid rgb(0, 255, 34);
+                                width: 10%;
+                                height: 20px;
+                                margin: 5px 0 5px 0 ;
+                                text-align: center;
+                                overflow: hidden;
+                                font-size: 12px;
+                                
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
