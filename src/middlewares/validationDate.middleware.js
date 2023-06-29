@@ -10,6 +10,7 @@ export function validationRol(req,res,next){
 
     if(emailAdmin === email && passwordAdmin === password ){
         res.redirect('/admin')
+    }else{
+        next()
     }
-    next()
 }

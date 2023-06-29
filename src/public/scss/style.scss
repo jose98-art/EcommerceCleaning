@@ -324,6 +324,89 @@
 
             }
         }
+        .contentBody{
+            width: 85%;
+            height: 100%;
+            overflow: scroll;
+            padding: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .containProduct{
+                width: 16%;
+                height: 50%;
+                margin: 50px;
+
+                background: #ffffff;
+                box-shadow:  27px 27px 54px #d9d9d9,
+                             -27px -27px 54px #ffffff;
+
+                .img{
+                    width: 97%;
+                    height: 45%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        margin-top: 0;
+                    }
+                }
+                .info{
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                .containAgregar{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    .cantidad{
+                        width: 100%;
+                        height: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        flex-direction: row;
+                        button{
+                            width: 30%;
+                            height: 50%;
+                            border: none;
+                            border-radius: 5px;
+                            background-color: rgb(29, 191, 228);
+                            
+                            transition: .5s;
+                            text-align: center;
+                        }
+                    }
+                    .btnAgregar{
+                        width: 80%;
+                        height: 50%;
+                        border: none;
+                        border-radius: 5px;
+                        background-color: rgb(29, 191, 228);
+                        font-size: 12px;
+                        transition: .5s;
+                    }
+                    .btnAgregar:hover{
+                        width: 55%;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
 
     }
 

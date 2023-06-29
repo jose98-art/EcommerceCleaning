@@ -2,8 +2,10 @@
 import { Router } from "express";
 import { validationRol } from "../middlewares/validationDate.middleware.js";
 import { getAllUsers } from "../controllers/users.controller.js";
+import { getAllProducts } from "../controllers/products.controller.js";
 
 const users = await getAllUsers()
+const products = await getAllProducts()
 
 const router = Router();
 
@@ -35,7 +37,10 @@ router.get("/homeClient",validationRol, (req, res) => {
 });
 
 router.get('/admin',(req,res)=>{
-  res.render('admin',{users})
+  res.render('admin',{users,products})
 })
 
+router.get('/errorDelete',(req,res)=>{
+  res.render('errorDelete')
+})
 export default router;

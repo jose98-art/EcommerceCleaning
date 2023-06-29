@@ -24,7 +24,7 @@
     </div>
 
     <div class="cart boxButton">
-      <button class="buttonCart">
+      <button class="buttonCart" onclick="location.href='/carts'">
         <i class="fas fa-shopping-cart"></i>
       </button>
       <button class="buttonLogout" onclick="location.href='/users/logout'">Cerrar sesion</button>
@@ -46,9 +46,10 @@
     </nav>
   </div>
 
-  <div class="contentBody">
-    <div>
-    </div>
+  <div class="contentBody" id="render-products">
+    
+    
+  
   </div>
 
 </div>
@@ -97,4 +98,6 @@
 
 </foote>
 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/js/searchBar.js"></script>
+<script src="/js/products.js"></script>

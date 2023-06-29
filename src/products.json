@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "649a933e7df7eb06da15654d",
+    "title": "Glade-limon",
+    "description": "Glade en aerosol con aroma a limón",
+    "code": 2989,
+    "precio": 60,
+    "status": true,
+    "stock": 9,
+    "category": "aromantizantes",
+    "thumbnails": "https://res.cloudinary.com/dl4ui6tel/image/upload/v1686679157/GLAAE-0194-06_rifucc.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "649a933edf7sfb06da13656f",
+    "title": "Glade-Naranja",
+    "description": "Glade en aerosol con aroma a Naranja",
+    "code": 2283,
+    "precio": 60,
+    "status": true,
+    "stock": 9,
+    "category": "aromantizantes",
+    "thumbnails": "https://res.cloudinary.com/dl4ui6tel/image/upload/v1686679157/GLAAE-0194-06_rifucc.jpg",
+    "__v": 0
+  }
+]

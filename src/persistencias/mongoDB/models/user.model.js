@@ -27,17 +27,15 @@ const usersSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  dni: {
-    type: Number,
+  associatedCard: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref:'carts'
   }
-  // ,
-  // cart: {
-  //   type: [{ type: mongoose.SchemaTypes.ObjectId, ref: "carts" }],
-  // },
-  // role: {
-  //   type: String,
-  //   default: "user",
-  // },
 });
+
+usersSchema.pre("find",function(next){
+  this.populate("associatedCard")
+  next()
+})
 
 export const userModel = mongoose.model("Users", usersSchema);

@@ -2,13 +2,13 @@
 import { getAll, create, login,userDelet } from "../services/users.service.js";
 
 export const getAllUsers = async (req, res) => {
-  return await getAll();
+  const products = await getAll();
+  return products
   
 };
 
 export const createUser = async (req, res) => {
   const usersObj = req.body;
-  console.log(usersObj,'controller')
   const newUser = await create(usersObj);
   if (newUser) {
     res.redirect("/login");
@@ -19,7 +19,6 @@ export const createUser = async (req, res) => {
 
 export const loginUser =  async(req,res)=>{
   const userLogin =  await login(req.body)
-  console.log(userLogin,'controller')
   if(userLogin){
     req.session.userInfo = userLogin
     res.redirect('/homeClient')
@@ -29,11 +28,13 @@ export const loginUser =  async(req,res)=>{
 }
 
 export const deleteU = async(req,res)=>{
-  const {_id} = req.params
-  console.log(_id,'controller')
-  const users = await userDelet(_id)
-  res.json({message:'usuario eliminado', users})
-  return users
+  const {id} = req.params
+  const users = await userDelet(id)
+  if(users){
+    res.redirect('/admin')
+  }else{
+    res.redirect('/errorDelete')
+  }
 }
 
 export const logout = async (req, res) => {

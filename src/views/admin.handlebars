@@ -6,7 +6,7 @@
 
   <div class="formAdmin">
     <h1>Agrega tus productos o articulos</h1>
-    <form id="formulario" action="" method="post">
+    <form id="formulario" action="/products/create" method="post">
 
       <label for="title">Title:
         <input type="text" name="title" id="title" />
@@ -20,8 +20,8 @@
         <input type="number" name="code" id="code" />
       </label>
 
-      <label for="price">Price:
-        <input type="number" name="price" id="price" />
+      <label for="precio">precio:
+        <input type="number" name="precio" id="precio" />
       </label>
 
       <label for="status">Status:
@@ -73,17 +73,18 @@
         </thead>
         <tbody>
           {{! condicional para insertar los productos }}
+          {{#each products}}
           <tr>
-            <td>Title</td>
-            <td>Description</td>
-            <td>Code</td>
-            <td>Price</td>
-            <td>Status</td>
-            <td>Stock</td>
-            <td>Category</td>
-            <td>https://mosaic.uoc.edu/ac/le/es/m6/ud7/76510_m6_66b.gif</td>
+            <td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>{{code}}</td>
+            <td>{{precio}}</td>
+            <td>{{status}}</td>
+            <td>{{stock}}</td>
+            <td>{{category}}</td>
+            <td>{{thumbnails}}</td>
             <td>
-              <button>
+              <button onclick="location.href='/products/deleteProduct/{{_id}}'">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="1em"
@@ -94,6 +95,7 @@
               </button>
               
           </tr>
+          {{/each}}
         </tbody>
       </table>
     </div>
@@ -117,7 +119,7 @@
           </tr>
         </thead>
         <tbody>
-          {{! condicional para insertar los productos }}
+          {{! iteracion para insertar los usuarios }}
             {{#each users}}
           <tr>
           
@@ -128,7 +130,7 @@
             <td>{{_id}}</td>
             <td>
            
-              <button onclick="location.href`/users/deleteUser/:{{_id}}`">
+              <button onclick="location.href='/users/deleteUser/{{_id}}'">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="1em"
@@ -145,6 +147,9 @@
         </tbody>
       </table>
     </div>
+    <button onclick="location.href='/login'">
+                Iniciar sesion
+            </button>
   </div>  
 
 </div>

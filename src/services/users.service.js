@@ -1,5 +1,5 @@
 // se importa factory
-import UsersDao from "../persistencias/DAOs/factory.js";
+import {UsersDao} from "../persistencias/DAOs/factory.js";
 
 export const getAll = async () => {
   const users = await UsersDao.getAll();
@@ -16,7 +16,7 @@ export const login = async (user) =>{
   return loginUser
 }
 
-export const userDelet = async (_id) =>{
-  const deleteUser = await UsersDao.deleteUser(_id)
+export const userDelet = async (id) =>{
+  const deleteUser = await UsersDao.deleteUser(id)
   return deleteUser
 }

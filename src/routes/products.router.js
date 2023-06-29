@@ -1,30 +1,13 @@
 import { Router } from 'express'
+import { getAllProducts, createProduct,deleteP } from '../controllers/products.controller.js'
 
 const router = Router()
-
-router.get('',async(req,res)=>{
-
+const product = await getAllProducts()
+console.log(product)
+router.get('/',(req,res)=>{
+    res.json(product)
 })
-
-router.get('',async(req,res)=>{
-
-})
-
-router.get('',async(req,res)=>{
-
-})
-
-router.get('',async(req,res)=>{
-
-})
-
-router.get('',async(req,res)=>{
-
-})
-
-
-
-
-
+router.post('/create',createProduct)
+router.get('/deleteProduct/:id',deleteP)
 
 export default router 

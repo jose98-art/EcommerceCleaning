@@ -9,6 +9,8 @@ import config from './config.js'
 import { __dirname } from './utils.js'
 import usersRouter from './routes/users.router.js'
 import viewsRouter from './routes/views.router.js'
+import productRouter from './routes/products.router.js'
+import cartRouter from './routes/carts.router.js'
 
 
 const app = express()
@@ -41,6 +43,8 @@ app.use('/',viewsRouter)
 
 //routes
 app.use('/users',usersRouter)
+app.use('/products',productRouter)
+app.use('/carts',cartRouter)
 
 
 

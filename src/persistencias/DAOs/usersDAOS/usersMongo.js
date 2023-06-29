@@ -53,9 +53,9 @@ export default class UsersMongo {
        
     }
 
-    async deleteUser(_id){
+    async deleteUser(id){
         try {
-            const deleteUser = await userModel.findByIdAndDelete(_id)
+            const deleteUser = await userModel.findByIdAndDelete(id)
             return deleteUser
         } catch (error) {
             console.log(error)
