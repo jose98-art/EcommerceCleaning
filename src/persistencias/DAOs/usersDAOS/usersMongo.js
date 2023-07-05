@@ -1,5 +1,5 @@
 import { userModel } from "../../mongoDB/models/user.model.js";
-import UsersDBDTO from "../../DTOs/usersDB.dto.js";
+import { hashDate, compareHashDate } from "../../../utils.js";
 import usersResponsDTO from "../../DTOs/usersResp.dto.js";
 
 export default class UsersMongo {
@@ -20,8 +20,9 @@ export default class UsersMongo {
             const existUser = await userModel.find({email, password})
 
             if(existUser.length === 0){
-                const userDTO = new UsersDBDTO(objUser)
-                const newUser = await userModel.create(userDTO)
+                const hashNewPassword = await hashDate(password)
+                const newUserAndPassword = {...objUser, password:hashNewPassword}
+                const newUser = await userModel.create(newUserAndPassword)
                 const usersRespDTO = new usersResponsDTO(newUser)
                 return usersRespDTO//solo muestra datos limitados por el DTOs
             }else{
@@ -39,7 +40,8 @@ export default class UsersMongo {
             const {email, password} = user
             const usuario = await userModel.findOne({email})
             if(usuario){
-                if(password === usuario.password){
+                const isPassword = compareHashDate(password, usuario.password)
+                if(isPassword){
                     return usuario
                 }
                 return null
@@ -51,6 +53,15 @@ export default class UsersMongo {
             throw new Error(error)
         }
        
+    }
+
+    async updateUserCartId(email, updateId){
+        const response = await userModel.findOneAndUpdate(
+            {email},
+            {associatedCart: updateId},
+            {new: true}
+        ).lean()
+        return response
     }
 
     async deleteUser(id){

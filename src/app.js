@@ -32,8 +32,8 @@ app.set('view engine', 'handlebars')
 app.use(session({
     secret: ' sessionKey',
     resave: false,
-    saveUninitialized: true,
-    // cookie: { maxAge: 10000},
+    saveUninitialized: false,
+    name:"sessionID",
     store: new MongoStore({
         mongoUrl: config.uri
     })

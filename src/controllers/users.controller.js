@@ -43,6 +43,7 @@ export const logout = async (req, res) => {
       console.log(error);
       res.json({ message: error });
     } else {
+      res.clearCookie("sessionID");
       res.redirect("/");
     }
   });

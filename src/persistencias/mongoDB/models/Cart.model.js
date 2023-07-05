@@ -7,15 +7,14 @@ const cartSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Products",
       },
-      quantity: {
-        Type: Number,
-      },
+      quantity: Number
+     
     },
   ],
 });
 
 cartSchema.pre("find",function(next){
-  this.populate("products.productId")
+  this.populate("productList.productId")
   next()
 })
 

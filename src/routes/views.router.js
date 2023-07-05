@@ -3,6 +3,7 @@ import { Router } from "express";
 import { validationRol } from "../middlewares/validationDate.middleware.js";
 import { getAllUsers } from "../controllers/users.controller.js";
 import { getAllProducts } from "../controllers/products.controller.js";
+import { validationCart } from "../middlewares/validationCart.middleware.js";
 
 const users = await getAllUsers()
 const products = await getAllProducts()
@@ -13,7 +14,7 @@ router.get("/", (req, res) => {
   res.render("home");
 });
 
-router.get("/registro", (req, res) => {
+router.get("/registro",validationCart, (req, res) => {
   res.render("registro");
 });
 
@@ -32,7 +33,7 @@ router.get("/errorLogin", (req, res) => {
 //verificar con un middleware si es admin o user
 router.get("/homeClient",validationRol, (req, res) => {
   const name = req.session.userInfo
-  console.log(name.first_name,'views')
+  console.log( req.session.userInfo,'views')
   res.render("homeClient", { userDate: req.session.userInfo });
 });
 
@@ -42,5 +43,13 @@ router.get('/admin',(req,res)=>{
 
 router.get('/errorDelete',(req,res)=>{
   res.render('errorDelete')
+})
+
+router.get('/cart',(req,res)=>{
+  res.render('cart')
+})
+
+router.get('/errorCart',(req,res)=>{
+  res.render('errorCart')
 })
 export default router;

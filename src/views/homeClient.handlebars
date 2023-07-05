@@ -24,7 +24,8 @@
     </div>
 
     <div class="cart boxButton">
-      <button class="buttonCart" onclick="location.href='/carts'">
+      <button class="buttonCart" onclick="location.href='/carts/{{userDate.associatedCard}}'">
+      {{!-- <button class="buttonCart" id="linkCart"> --}}
         <i class="fas fa-shopping-cart"></i>
       </button>
       <button class="buttonLogout" onclick="location.href='/users/logout'">Cerrar sesion</button>
@@ -97,6 +98,9 @@
   </div>
 
 </foote>
+<script>
+  const idCartUser = "{{userDate.associatedCard}}"
+</script>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/js/searchBar.js"></script>
